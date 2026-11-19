@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transporte e tarifas | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<!-- Atributo data-pagina identifica a página atual para os scripts JavaScript -->
+<body data-pagina="transporte">
+
+  <!-- Cabeçalho principal com a barra de navegação responsiva -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-curitiba">
+      <div class="container">
+        <!-- Logotipo/marca com link para a página inicial -->
+        <a class="navbar-brand fw-bold" href="index.html">Curitiba Guia</a>
+        
+        <!-- Botão hambúrguer para expandir o menu em telas menores -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Itens do menu de navegação -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="atracoes.html">Atrações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="roteiros.html">Roteiros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gastronomia.html">Gastronomia</a>
+            </li>
+            <!-- Link ativo indicando a página atual de Transporte -->
+            <li class="nav-item">
+              <a class="nav-link active" href="transporte.html">Transporte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="audioguia.html">Áudio-guia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="favoritos.html">Favoritos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção principal de conteúdo da página -->
+  <main class="container py-4">
+    <!-- Área reservada para exibição dinâmica de alertas via JS -->
+    <div id="area-alerta"></div>
+
+    <!-- Título principal e descrição -->
+    <h1>Transporte e tarifas</h1>
+    <p>Valores ilustrativos: confirme tarifas e horários atualizados no site oficial antes de viajar.</p>
+
+    <!-- Contêiner responsivo para permitir rolagem horizontal da tabela em telas pequenas -->
+    <div class="table-responsive">
+      <!-- Tabela estilizada com classes do Bootstrap -->
+      <table class="table table-striped table-hover tabela-curitiba">
+        <!-- Legenda acessível da tabela -->
+        <caption>Principais linhas para quem visita a cidade</caption>
+        
+        <!-- Cabeçalho da tabela -->
+        <thead>
+          <tr>
+            <th scope="col">Linha de ônibus</th>
+            <th scope="col">Rota principal</th>
+            <th scope="col">Tarifa</th>
+            <th scope="col">Horário de pico</th>
+          </tr>
+        </thead>
+        
+        <!-- Corpo da tabela com as informações das linhas -->
+        <tbody>
+          <tr>
+            <td>Linha Turismo</td>
+            <td>Circuito pelos principais pontos turísticos</td>
+            <td>R$ 50,00</td>
+            <td>10h às 13h</td>
+          </tr>
+          <tr>
+            <td>Expresso Ligeirão</td>
+            <td>Eixo norte-sul pelas canaletas exclusivas</td>
+            <td>R$ 6,00</td>
+            <td>6h às 9h e 17h às 19h</td>
+          </tr>
+          <tr>
+            <td>Circular Centro</td>
+            <td>Volta pelo centro histórico</td>
+            <td>R$ 6,00</td>
+            <td>7h às 9h e 17h às 19h</td>
+          </tr>
+          <tr>
+            <td>Interbairros II</td>
+            <td>Liga bairros sem passar pelo centro</td>
+            <td>R$ 6,00</td>
+            <td>6h às 8h30 e 17h às 19h</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Rodapé institucional -->
+  <footer class="rodape-bs">
+    <p class="mb-1">Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p class="mb-0">
+      <a href="mapa.html">Mapa do site</a>
+    </p>
+  </footer>
+
+  <!-- Scripts JavaScript (Bootstrap bundle, dados da aplicação e scripts da página) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/paginas.js"></script>
+</body>
+</html>

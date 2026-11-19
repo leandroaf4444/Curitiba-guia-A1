@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/puro.css">
+</head>
+
+<!-- Identifica a página atual através do atributo data-pagina para controle via CSS ou JS -->
+<body data-pagina="contato">
+
+  <!-- Cabeçalho principal com o menu de navegação -->
+  <header class="topo">
+    <!-- Logotipo / Nome do site com link para a página inicial -->
+    <a class="marca" href="index.html">Curitiba Guia</a>
+    
+    <!-- Botão de acionamento do menu para telas pequenas -->
+    <button id="btnMenu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    
+    <!-- Navegação principal do site -->
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="atracoes.html">Atrações</a>
+      <a href="roteiros.html">Roteiros</a>
+      <a href="gastronomia.html">Gastronomia</a>
+      <a href="transporte.html">Transporte</a>
+      <a href="audioguia.html">Áudio-guia</a>
+      <a href="favoritos.html">Favoritos</a>
+      <!-- Link ativo indicando a página corrente -->
+      <a href="contato.html" class="ativo">Contato</a>
+      <a href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a>
+    </nav>
+  </header>
+
+  <!-- Seção de conteúdo principal da página -->
+  <main class="principal">
+    <!-- Título principal da página de contato -->
+    <h1>Fale com a gente</h1>
+
+    <!-- Contêiner estrutural para o formulário e a barra lateral de histórico -->
+    <div class="conteudo-lateral">
+      <section>
+        <!-- Elemento reservado para feedback visual e mensagens de status via JS -->
+        <div id="retorno" role="status"></div>
+
+        <!-- Formulário de contato (novalidate desativa as validações nativas do navegador para uso de script customizado) -->
+        <form id="form-contato" novalidate>
+          <!-- Campo 1: Nome completo -->
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome" autocomplete="name">
+          </div>
+
+          <!-- Campo 2: E-mail -->
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="nome@exemplo.com" autocomplete="email">
+          </div>
+
+          <!-- Campo 3: Telefone com validação por expressão regular (pattern) -->
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" placeholder="(41) 99999-9999" autocomplete="tel">
+          </div>
+
+          <!-- Campo 4: Seleção de assunto (Dropdown) -->
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="">Escolha uma opção</option>
+              <option>Dúvida sobre um lugar</option>
+              <option>Sugestão de roteiro</option>
+              <option>Erro no site</option>
+            </select>
+          </div>
+
+          <!-- Campo 5: Área de texto para mensagem detalhada -->
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required minlength="10" placeholder="Escreva pelo menos 10 caracteres"></textarea>
+          </div>
+
+          <!-- Botão de envio do formulário -->
+          <input class="botao" type="submit" value="Enviar mensagem">
+        </form>
+      </section>
+
+      <!-- Barra lateral para exibição de histórico de mensagens (dinâmica via JS) -->
+      <aside>
+        <h2>Mensagens enviadas</h2>
+        <ul id="historico"></ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Rodapé do projeto -->
+  <footer class="rodape">
+    <p>Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Carregamento dos scripts JavaScript do projeto e manipulação do formulário -->
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>

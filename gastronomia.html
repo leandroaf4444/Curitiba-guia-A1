@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gastronomia | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<!-- Atributo data-pagina identifica esta página para controle via scripts -->
+<body data-pagina="gastronomia">
+
+  <!-- Cabeçalho principal com a barra de navegação responsiva -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-curitiba">
+      <div class="container">
+        <!-- Logotipo do site com link para a página inicial -->
+        <a class="navbar-brand fw-bold" href="index.html">Curitiba Guia</a>
+        
+        <!-- Botão hambúrguer para abrir/fechar o menu em dispositivos móveis -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Lista de navegação principal do menu -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="atracoes.html">Atrações</a></li>
+            <li class="nav-item"><a class="nav-link" href="roteiros.html">Roteiros</a></li>
+            <!-- Link ativo indicando a página atual -->
+            <li class="nav-item"><a class="nav-link active" href="gastronomia.html">Gastronomia</a></li>
+            <li class="nav-item"><a class="nav-link" href="transporte.html">Transporte</a></li>
+            <li class="nav-item"><a class="nav-link" href="audioguia.html">Áudio-guia</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal com container responsivo do Bootstrap -->
+  <main class="container py-4">
+    <!-- Área reservada para exibição dinâmica de alertas via JS -->
+    <div id="area-alerta"></div>
+
+    <!-- Título principal da página e descrição -->
+    <h1>Gastronomia</h1>
+    <p>Sabores que contam a história dos imigrantes que formaram a cidade.</p>
+
+    <!-- Grid de cards com as opções gastronômicas tipicamente curitibanas -->
+    <section class="row g-4">
+      
+      <!-- Card 1: Pinhão cozido -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="img/pinhao.jpg" class="card-img-top" alt="Pinhão cozido">
+          <div class="card-body">
+            <h2 class="card-title h5">Pinhão cozido</h2>
+            <p class="card-text">Semente da araucária, típica dos meses frios, servida quente com sal.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2: Polenta frita -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="img/polenta.jpg" class="card-img-top" alt="Polenta frita">
+          <div class="card-body">
+            <h2 class="card-title h5">Polenta frita</h2>
+            <p class="card-text">Acompanhamento tradicional dos restaurantes de Santa Felicidade.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 3: Pierogi -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <img src="img/pierogi.jpg" class="card-img-top" alt="Pierogi">
+          <div class="card-body">
+            <h2 class="card-title h5">Pierogi</h2>
+            <p class="card-text">Massa recheada herdada da imigração polonesa e ucraniana.</p>
+          </div>
+        </article>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Rodapé padrão do site -->
+  <footer class="rodape-bs">
+    <p class="mb-1">Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p class="mb-0"><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Scripts JavaScript do projeto -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/paginas.js"></script>
+</body>
+</html>

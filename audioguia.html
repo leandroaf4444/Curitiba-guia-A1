@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Áudio-guia | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<!-- Corpo da página, identificando a página atual pelo atributo data-pagina -->
+<body data-pagina="audioguia">
+
+  <!-- Cabeçalho principal com a barra de navegação -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-curitiba">
+      <div class="container">
+        <!-- Logotipo da marca com link para a página inicial -->
+        <a class="navbar-brand fw-bold" href="index.html">Curitiba Guia</a>
+        
+        <!-- Botão hambúrguer para menu responsivo em dispositivos móveis -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Itens do menu de navegação -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="atracoes.html">Atrações</a></li>
+            <li class="nav-item"><a class="nav-link" href="roteiros.html">Roteiros</a></li>
+            <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomia</a></li>
+            <li class="nav-item"><a class="nav-link" href="transporte.html">Transporte</a></li>
+            <!-- Link ativo indicando que o usuário está na página de áudio-guia -->
+            <li class="nav-item"><a class="nav-link active" href="audioguia.html">Áudio-guia</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <main class="container py-4">
+    <!-- Contêiner dinâmico para alertas e mensagens do sistema -->
+    <div id="area-alerta"></div>
+
+    <!-- Título e descrição da página -->
+    <h1>Áudio-guia</h1>
+    <p>Escute o guia enquanto caminha.</p>
+
+    <!-- Seção de cards contendo os players de áudio para cada atração -->
+    <section class="row g-4 mb-4">
+      <!-- Card 1: Jardim Botânico -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">Jardim Botânico</h2>
+            <p>A história da estufa e dos jardins.</p>
+            <!-- Elemento nativo de áudio com controles de reprodução -->
+            <audio controls preload="none" class="w-100">
+              <source src="audio/jardim-botanico.mp3" type="audio/mpeg">
+              Seu navegador não suporta áudio.
+            </audio>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2: Ópera de Arame -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">Ópera de Arame</h2>
+            <p>Como o teatro foi construído entre as árvores.</p>
+            <audio controls preload="none" class="w-100">
+              <source src="audio/opera.mp3" type="audio/mpeg">
+              Seu navegador não suporta áudio.
+            </audio>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 3: Rua XV de Novembro -->
+      <div class="col-md-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">Rua XV de Novembro</h2>
+            <p>Um passeio sonoro pelo calçadão do centro.</p>
+            <audio controls preload="none" class="w-100">
+              <source src="audio/ruaxv.mp3" type="audio/mpeg">
+              Seu navegador não suporta áudio.
+            </audio>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Galeria de Imagens da Cidade -->
+    <h2 class="h4">Galeria</h2>
+    <section class="galeria-grid">
+      <img src="img/jardim-botanico.jpg" alt="Jardim Botânico">
+      <img src="img/opera-de-arame.jpg" alt="Ópera de Arame">
+      <img src="img/parque-tangua.jpg" alt="Parque Tanguá">
+      <img src="img/museu-oscar-niemeyer.jpg" alt="Museu Oscar Niemeyer">
+      <img src="img/torre-panoramica.jpg" alt="Torre Panorâmica">
+      <img src="img/rua-xv.jpg" alt="Rua XV de Novembro">
+      <img src="img/mercado-municipal.jpg" alt="Mercado Municipal">
+      <img src="img/parque-tingui.jpg" alt="Parque Tingui">
+    </section>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer class="rodape-bs">
+    <p class="mb-1">Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p class="mb-0"><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Scripts JavaScript para interatividade, gerenciamento de dados e favoritos -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/paginas.js"></script>
+</body>
+</html>

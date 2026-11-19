@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/puro.css">
+  <style>
+    #dica-dia {
+      background: #FFFFFF;
+      border-left: 6px solid #E0A526;
+      padding: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<!-- Atributo data-pagina identifica a página atual para scripts e estilos -->
+<body data-pagina="index">
+
+  <!-- Cabeçalho principal com logomarca e menu de navegação -->
+  <header class="topo">
+    <!-- Logotipo da aplicação apontando para a página inicial -->
+    <a class="marca" href="index.html">Curitiba Guia</a>
+    
+    <!-- Botão para alternar a exibição do menu em telas menores -->
+    <button id="btnMenu" class="btn-menu" type="button" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    
+    <!-- Menu principal de navegação -->
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="index.html" class="ativo">Início</a>
+      <a href="atracoes.html">Atrações</a>
+      <a href="roteiros.html">Roteiros</a>
+      <a href="gastronomia.html">Gastronomia</a>
+      <a href="transporte.html">Transporte</a>
+      <a href="audioguia.html">Áudio-guia</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="contato.html">Contato</a>
+      <a href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal do documento -->
+  <main class="principal">
+    
+    <!-- Seção de destaque inicial (Hero Banner) -->
+    <section class="hero">
+      <div>
+        <h1 style="margin-top: 0;">Explore Curitiba no seu ritmo</h1>
+        <p>Parques, museus, mercados e roteiros organizados para você planejar o passeio e salvar os lugares que mais gostou.</p>
+        <a class="botao" href="atracoes.html">Ver atrações</a>
+      </div>
+      <img src="img/hero.jpg" alt="Araucária sob o céu de Curitiba">
+    </section>
+
+    <!-- Galeria visual com atrações da cidade -->
+    <h2>Galeria da cidade</h2>
+    <section class="galeria">
+      <figure>
+        <img src="img/jardim-botanico.jpg" alt="Jardim Botânico">
+        <figcaption>Jardim Botânico</figcaption>
+      </figure>
+      <figure>
+        <img src="img/opera-de-arame.jpg" alt="Ópera de Arame">
+        <figcaption>Ópera de Arame</figcaption>
+      </figure>
+      <figure>
+        <img src="img/parque-tangua.jpg" alt="Parque Tanguá">
+        <figcaption>Parque Tanguá</figcaption>
+      </figure>
+      <figure>
+        <img src="img/museu-oscar-niemeyer.jpg" alt="Museu Oscar Niemeyer">
+        <figcaption>Museu Oscar Niemeyer</figcaption>
+      </figure>
+      <figure>
+        <img src="img/torre-panoramica.jpg" alt="Torre Panorâmica">
+        <figcaption>Torre Panorâmica</figcaption>
+      </figure>
+      <figure>
+        <img src="img/rua-xv.jpg" alt="Rua XV de Novembro">
+        <figcaption>Rua XV de Novembro</figcaption>
+      </figure>
+    </section>
+
+    <!-- Seção de cartões com os principais atalhos do guia -->
+    <h2>Por onde começar</h2>
+    <section class="cartoes">
+      <article class="cartao">
+        <img src="img/jardim-botanico.jpg" alt="Parques e jardins">
+        <div class="corpo">
+          <h3>Parques e jardins</h3>
+          <p>Caminhe entre estufas, lagos e mirantes sem sair da cidade.</p>
+          <a class="botao" href="atracoes.html">Saiba mais</a>
+        </div>
+      </article>
+      <article class="cartao">
+        <img src="img/rua-xv.jpg" alt="Roteiros prontos">
+        <div class="corpo">
+          <h3>Roteiros prontos</h3>
+          <p>Escolha um percurso de 4 a 6 horas e aproveite o dia.</p>
+          <a class="botao" href="roteiros.html">Saiba mais</a>
+        </div>
+      </article>
+      <article class="cartao">
+        <img src="img/torre-panoramica.jpg" alt="Transporte">
+        <div class="corpo">
+          <h3>Transporte</h3>
+          <p>Consulte linhas, tarifas e horários de maior movimento.</p>
+          <a class="botao" href="transporte.html">Saiba mais</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Bloco com conteúdo lateral e avisos em segundo plano -->
+    <div class="conteudo-lateral">
+      <article>
+        <h2>Planeje com calma</h2>
+        <p>Todas as páginas funcionam offline. Salve lugares nos favoritos e eles ficam guardados no seu navegador.</p>
+        <p id="contador-favoritos"></p>
+      </article>
+      <!-- Elemento preenchido dinamicamente com a dica do dia via JS -->
+      <aside id="dica-dia"></aside>
+    </div>
+  </main>
+
+  <!-- Rodapé institucional -->
+  <footer class="rodape">
+    <p>Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Inclusão dos scripts de suporte e funcionalidade -->
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/puro.js"></script>
+</body>
+</html>

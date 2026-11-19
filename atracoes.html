@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atrações | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<!-- Corpo da página, identificando a página atual através do atributo data-pagina -->
+<body data-pagina="atracoes">
+
+  <!-- Cabeçalho principal da página -->
+  <header>
+    <!-- Barra de navegação responsiva utilizando classes do Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-curitiba">
+      <div class="container">
+        <!-- Logotipo ou nome da marca que redireciona para a página inicial -->
+        <a class="navbar-brand fw-bold" href="index.html">Curitiba Guia</a>
+        
+        <!-- Botão de menu responsivo (hambúrguer) para telas menores -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Conteúdo do menu que se recolhe/expande em dispositivos móveis -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Lista de links de navegação -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link active" href="atracoes.html">Atrações</a></li>
+            <li class="nav-item"><a class="nav-link" href="roteiros.html">Roteiros</a></li>
+            <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomia</a></li>
+            <li class="nav-item"><a class="nav-link" href="transporte.html">Transporte</a></li>
+            <li class="nav-item"><a class="nav-link" href="audioguia.html">Áudio-guia</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção principal de conteúdo da página -->
+  <main class="container py-4">
+    <!-- Área reservada para exibir mensagens de alerta via JavaScript -->
+    <div id="area-alerta"></div>
+
+    <!-- Título principal da página -->
+    <h1>Atrações de Curitiba</h1>
+
+    <!-- Formulário de busca e filtros para as atrações -->
+    <form class="row g-2 mb-3" onsubmit="return false">
+      <!-- Campo de texto para digitar o nome da atração a ser buscada -->
+      <div class="col-md-8">
+        <label for="busca" class="form-label">Buscar</label>
+        <input id="busca" type="search" class="form-control" placeholder="Digite o nome do lugar">
+      </div>
+      <!-- Seletor (dropdown) para filtrar as atrações por categoria -->
+      <div class="col-md-4">
+        <label for="filtro-categoria" class="form-label">Categoria</label>
+        <select id="filtro-categoria" class="form-select">
+          <option value="todas">Todas</option>
+          <option>Parques</option>
+          <option>Cultura</option>
+          <option>Centro e vistas</option>
+        </select>
+      </div>
+    </form>
+
+    <!-- Parágrafo para exibir a contagem dinâmica de itens encontrados -->
+    <p id="contador" class="text-muted"></p>
+
+    <!-- Seção onde os cards de atrações serão injetados dinamicamente via script -->
+    <section id="lista-atracoes" class="row g-4"></section>
+  </main>
+
+  <!-- Rodapé da página -->
+  <footer class="rodape-bs">
+    <p class="mb-1">Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p class="mb-0"><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Scripts JavaScript necessários para o funcionamento e interatividade da página -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/paginas.js"></script>
+</body>
+</html>

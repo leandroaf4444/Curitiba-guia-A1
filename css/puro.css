@@ -1,0 +1,336 @@
+/* Definição de variáveis globais de cores para facilitar a manutenção do tema visual */
+:root {
+  --verde: #1E4D3B;
+  --azul: #1F5FA6;
+  --amarelo: #E0A526;
+  --fundo: #F2F5F3;
+  --texto: #16231D;
+  --branco: #FFFFFF;
+  --erro: #B3261E;
+}
+
+/* Configuração universal para incluir bordas e preenchimentos nas dimensões totais dos elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos globais do corpo da página (margens, tipografia e cores padrão) */
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* Tipografia com fontes serifadas para os títulos principais */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+/* Cor padrão para os links da aplicação */
+a {
+  color: var(--azul);
+}
+
+/* Estilização do cabeçalho principal (topo) utilizando Flexbox */
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--verde);
+  padding: 0.75rem 1rem;
+}
+
+/* Logomarca do site no cabeçalho */
+.marca {
+  color: var(--branco);
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Botão de acionamento do menu (hambúrguer) para dispositivos móveis */
+.btn-menu {
+  background: transparent;
+  color: var(--branco);
+  border: 1px solid var(--branco);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Estrutura inicial do menu de navegação (oculto por padrão em telas pequenas) */
+.menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Classe ativada via JavaScript para exibir o menu em telas menores */
+.menu.aberto {
+  display: flex;
+}
+
+/* Estilização dos links do menu */
+.menu a {
+  color: var(--branco);
+  text-decoration: none;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 3px solid transparent;
+}
+
+/* Efeito hover e link ativo no menu de navegação */
+.menu a:hover,
+.menu a.ativo {
+  border-bottom-color: var(--amarelo);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contêiner principal do conteúdo das páginas */
+.principal {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* Seção de destaque inicial (Hero) organizada em coluna por padrão */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Imagem da seção hero dimensionada responsivamente */
+.hero img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Grid padrão para a galeria de fotos (1 coluna em telas pequenas) */
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+/* Estilização dos itens individuais (*figure*) da galeria */
+.galeria figure {
+  margin: 0;
+  background: var(--branco);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #D5DED8;
+}
+
+/* Imagens dentro da galeria */
+.galeria img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Legenda das imagens da galeria */
+.galeria figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Layout em coluna para os cartões de atalhos/seções */
+.cartoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Estrutura visual de cada cartão */
+.cartao {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border: 1px solid #D5DED8;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Imagem dos cartões */
+.cartao img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Corpo interno do cartão */
+.cartao .corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Posiciona os botões ou links no rodapé do cartão */
+.cartao .corpo a {
+  margin-top: auto;
+}
+
+/* Layout em grid para conteúdos laterais */
+.conteudo-lateral {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Estilização padrão para botões do site */
+.botao {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--branco);
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Efeito de foco/hover nos botões */
+.botao:hover {
+  background: var(--azul);
+}
+
+/* Agrupamento padrão para campos de formulários */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* Rótulos (labels) dos campos de formulários */
+.campo label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Estilização para entradas de dados, seletores e áreas de texto */
+input,
+select,
+textarea {
+  padding: 0.6rem;
+  border: 2px solid #B7C4BC;
+  border-radius: 4px;
+  font: inherit;
+  background: var(--branco);
+}
+
+/* Efeito ao passar o mouse sobre os campos de entrada */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--azul);
+}
+
+/* Efeito visual quando o campo está em foco (selecionado) */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--amarelo);
+  border-color: var(--verde);
+}
+
+/* Validação visual de campos inválidos preenchidos pelo usuário */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--erro);
+  background: #FDF0EF;
+}
+
+/* Caixas de avisos e retornos do sistema */
+.aviso {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para avisos de sucesso (ok) */
+.aviso.ok {
+  background: #E2F1E8;
+  border: 1px solid var(--verde);
+}
+
+/* Estilo para avisos de erro */
+.aviso.erro {
+  background: #FDF0EF;
+  border: 1px solid var(--erro);
+}
+
+/* Rodapé institucional da página */
+.rodape {
+  background: var(--verde);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+/* Links dentro do rodapé */
+.rodape a {
+  color: var(--amarelo);
+}
+
+/* --------------------------------------------------
+   RESPONSIVIDADE (MEDIA QUERIES)
+-------------------------------------------------- */
+
+/* Dispositivos a partir de 480px de largura (Tablets menores / Telas médias) */
+@media (min-width: 480px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dispositivos a partir de 729px de largura (Tablets e Desktops) */
+@media (min-width: 729px) {
+  .btn-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+    gap: 0.25rem;
+  }
+
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero > * {
+    flex: 1;
+  }
+
+  .cartoes {
+    flex-direction: row;
+  }
+}
+
+/* Dispositivos a partir de 990px de largura (Telas grandes / Desktops) */
+@media (min-width: 990px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .conteudo-lateral {
+    grid-template-columns: 2fr 1fr;
+  }
+}

@@ -1,0 +1,106 @@
+/* Configurações globais do corpo da página (cores de fundo, texto e tipografia padrão) */
+body {
+  background: #F2F5F3;
+  color: #16231D;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+/* Tipografia diferenciada para títulos (utilizando fontes serifadas) */
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Estilização da barra de navegação principal (tema Curitiba) */
+.navbar-curitiba {
+  background: #1E4D3B;
+}
+
+/* Estilo base dos links da barra de navegação com borda inferior transparente */
+.navbar-curitiba .nav-link {
+  border-bottom: 3px solid transparent;
+}
+
+/* Efeito de destaque ao passar o mouse (hover) ou para o link ativo na navbar */
+.navbar-curitiba .nav-link:hover,
+.navbar-curitiba .nav-link.active {
+  border-bottom-color: #E0A526;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Padronização da altura e proporção das imagens no topo dos cards */
+.card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+/* Efeito de destaque na borda do card ao passar o mouse */
+.card:hover {
+  border-color: #1F5FA6;
+}
+
+/* Estilização padrão dos botões com tema Curitiba */
+.btn-curitiba {
+  background: #1E4D3B;
+  color: #FFFFFF;
+}
+
+/* Efeito hover (mouse em cima) para os botões do tema */
+.btn-curitiba:hover {
+  background: #1F5FA6;
+  color: #FFFFFF;
+}
+
+/* Estado visual do botão quando o item está favoritado */
+.btn-curitiba.salvo {
+  background: #E0A526;
+  color: #16231D;
+}
+
+/* Cabeçalho da tabela estilizada com as cores do projeto */
+.tabela-curitiba thead th {
+  background: #1E4D3B;
+  color: #FFFFFF;
+}
+
+/* Grid responsivo para a galeria de imagens (padrão 2 colunas em telas menores) */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+/* Dimensões, adaptação e bordas arredondadas para as imagens da galeria */
+.galeria-grid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Rodapé estilizado com o tema do site */
+.rodape-bs {
+  background: #1E4D3B;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+/* Cor dos links dentro do rodapé */
+.rodape-bs a {
+  color: #E0A526;
+}
+
+/* Mídia responsiva: amplia para 4 colunas em telas a partir de 729px de largura */
+@media (min-width: 729px) {
+  .galeria-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ajuste de cores para o alerta de itens favoritos vazios/informativos */
+#lista-favoritos .alert-info {
+  background-color: #1E4D3B !important;
+  color: #dfe4e5 !important;
+  border-color: #bee5eb !important;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes | Curitiba Guia</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<!-- Atributo data-pagina identifica esta página para manipulação nos scripts do projeto -->
+<body data-pagina="detalhe">
+
+  <!-- Cabeçalho principal com a barra de navegação responsiva -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-curitiba">
+      <div class="container">
+        <!-- Marca / Logotipo da aplicação com link para o início -->
+        <a class="navbar-brand fw-bold" href="index.html">Curitiba Guia</a>
+        
+        <!-- Botão hambúrguer do menu em telas pequenas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Links de navegação principal -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="atracoes.html">Atrações</a></li>
+            <li class="nav-item"><a class="nav-link" href="roteiros.html">Roteiros</a></li>
+            <li class="nav-item"><a class="nav-link" href="gastronomia.html">Gastronomia</a></li>
+            <li class="nav-item"><a class="nav-link" href="transporte.html">Transporte</a></li>
+            <li class="nav-item"><a class="nav-link" href="audioguia.html">Áudio-guia</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.curitiba.pr.gov.br/" target="_blank" rel="noopener">Turismo oficial</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal com container responsivo do Bootstrap -->
+  <main class="container py-4">
+    <!-- Área para exibição dinâmica de alertas ou mensagens -->
+    <div id="area-alerta"></div>
+
+    <!-- Grid do Bootstrap separando o conteúdo principal da barra lateral -->
+    <div class="row g-4">
+      
+      <!-- Artigo principal com os detalhes da atração (8 colunas em telas grandes) -->
+      <article class="col-lg-8">
+        <!-- Título preenchido dinamicamente via JS -->
+        <h1 id="detalhe-titulo"></h1>
+        
+        <!-- Imagem principal preenchida dinamicamente via JS -->
+        <img id="detalhe-img" class="img-fluid rounded mb-3" alt="">
+        
+        <!-- Parágrafo da descrição preenchido dinamicamente via JS -->
+        <p id="detalhe-descricao"></p>
+
+        <!-- Seção de vídeo promocional da atração -->
+        <h2 class="h4">Vídeo de apresentação</h2>
+        <video class="w-100 rounded mb-3" controls preload="none" poster="img/hero.jpg">
+          <source src="video/Curitiba-Drone.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+
+        <!-- Botão para favoritar o item exibido -->
+        <button type="button" id="detalhe-fav" class="btn btn-curitiba btn-fav">Salvar nos Favoritos</button>
+      </article>
+
+      <!-- Barra lateral com informações complementares (4 colunas em telas grandes) -->
+      <aside class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="h5">Informações</h2>
+            <!-- Dados de bairro e categoria preenchidos via JS -->
+            <p class="mb-1"><strong>Bairro:</strong> <span id="detalhe-bairro"></span></p>
+            <p class="mb-3"><strong>Categoria:</strong> <span id="detalhe-categoria"></span></p>
+            <!-- Botão de retorno à lista de atrações -->
+            <a href="atracoes.html" class="btn btn-outline-secondary btn-sm">Voltar às atrações</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Rodapé padrão do site -->
+  <footer class="rodape-bs">
+    <p class="mb-1">Curitiba Guia - projeto acadêmico DFEW.08</p>
+    <p class="mb-0"><a href="mapa.html">Mapa do site</a></p>
+  </footer>
+
+  <!-- Scripts JavaScript (Bootstrap bundle com Popper, dados da aplicação e lógica das páginas) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/paginas.js"></script>
+</body>
+</html>
